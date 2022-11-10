@@ -1,9 +1,24 @@
 #usu{
-    max-width: 200px;
-    max-height: 150px;
-    display: block;
+    width: 200px;
+    height: 150px;
+    display: flex;
     float: right;
+    border: solid black 2px;
+    flex-direction: column;
 }
 #usu img{
-
-} 
+    border-radius: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    cursor: pointer;
+}
+#usu{
+    color: white;
+}
+#usu tbody{
+    display: none;
+}
+#usu tbody tr{
+    display: flex;
+    flex-direction: column;
+}

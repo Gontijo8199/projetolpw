@@ -1,0 +1,39 @@
+.opc{
+    background-color: blue;
+    width: 70px;
+    min-height: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 90ms linear;
+    padding-top: 3px;
+}
+.subop{
+    margin-top: 3px;
+    display: none;
+    flex-direction: row-reverse;
+
+}
+.opc:first-child{
+    border-top-right-radius: 30px;
+    margin-top: 10px;
+}
+.opc:last-child{
+    border-bottom-left-radius: 30px;
+    padding-bottom: 3px;
+}
+#icmn{
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+    text-align: center;
+    background-color: darkgoldenrod;
+    border-bottom-right-radius: 20px;
+    transition: 90ms linear;
+}
+#mn{
+    height: 100vh;
+    width: 70px;
+    background-color: darkkhaki;
+    transition: 90ms linear;
+}

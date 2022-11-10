@@ -1,0 +1,41 @@
+#nvver{
+    display: flexbox;
+    height: 400px;
+    width: 900px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    float: left;
+}
+#imgs-nv{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 140px;
+}
+#imgs-nv img{
+    max-width: 300px;
+    max-height: 300px;
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    transition: linear 100ms;
+}
+#imgs-nv img:hover{
+    scale: 1.12;
+}
+
+#imgs-nv a{
+    max-width: 250px;
+    max-height: 250px;
+    position: relative;
+    top: 20px;
+}
+#desc{
+    display: flex;
+    background-color: blueviolet;
+    height: 400px;
+    width: 900px;
+    border-radius: 30px;
+}
+#txt{
+    margin-top: 50px;
+}

@@ -1,0 +1,40 @@
+#evnts{
+    position: relative;
+    background-color: rgba(20, 20, 43, 0.644);
+    border: solid 1px red;
+    width: 600px;
+    height: 300px;
+}
+#evnts img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 300px;
+    max-width: 530px;
+}
+#btvt{
+    display: block;
+    float: left;
+    margin: 0px;
+    min-height: 300px;
+    width: 30px;
+}
+#btps{
+    display: block;
+    float: right;
+    margin: 0px;
+    min-height: 300px;
+    width: 30px;
+}
+article h1{
+    color: aliceblue;   
+    margin: 0px;
+}
+#divp{
+    position: relative;
+    float: right;
+    width: 600px;
+    height: 400px;
+    margin-top: 3%;
+    margin-right: 5%;
+}

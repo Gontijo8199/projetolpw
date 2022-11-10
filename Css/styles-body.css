@@ -1,0 +1,10 @@
+body{
+    margin: 0px;
+    background-color: rgb(35, 35, 75);
+}
+html{
+    display: flexbox;
+}
+nav{
+    position: fixed;
+}

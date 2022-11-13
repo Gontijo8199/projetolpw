@@ -1,0 +1,12 @@
+table,
+td,
+tr{
+    border: solid black 1px;
+    color: white;
+}
+color{
+    white-space: pre-line;
+}
+body{
+    background-color: rgb(35, 35, 75);
+}

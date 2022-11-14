@@ -1,0 +1,16 @@
+body{
+    margin: 0px;
+    display: block;
+}
+table{
+    max-width: 100%;
+    margin-left: 10%;
+}
+tr{
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    position: fixed;
+}

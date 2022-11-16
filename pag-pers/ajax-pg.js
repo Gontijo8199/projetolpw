@@ -82,15 +82,19 @@ $.ajax({
                                     $($mult).append($pmult);
                             $mu.appendChild($mult)
                             }
-                            else{
+                            else{ 
                                 if(mod == 'F1' && sk[0] != 'Charged Attack Stamina Cost|'){
                                     obj += 's';
                                 }
                                 else if(mod == 'F2'){
                                     $($pnm).html(`${sk[0].split('|')[1]} - ${sk[0].split('|')[1]}`);
                                     obj *= 10;
-                                    obj = Math.round(obj);
                                     obj += 's';
+                                }
+                                else if(mod == 'F2P'){
+                                    obj *= 100;
+                                    obj = Math.round(obj);
+                                    obj += ' Per Energy';
                                 }
                                         $($pmult).html(obj);
                                     $($mult).append($pmult);

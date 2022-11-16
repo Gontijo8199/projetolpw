@@ -1,13 +1,9 @@
-
-
-
 $.ajax({
     url: `https://api.ambr.top/v2/en/avatar?vh=32F3`,
     dataType: 'json',
     success: resp => {
         let dd = resp.data.items;
         var ind = 10000002;
-        var nm = 'Yae Miko';
         
         for(let i = ind; i <= 10000076; i++){
                 if(dd[i] != undefined){

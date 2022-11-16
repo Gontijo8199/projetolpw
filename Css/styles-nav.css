@@ -36,3 +36,7 @@
     background-color: darkkhaki;
     transition: 90ms linear;
 }
+.oppr,
+.subop{
+    color: white;
+}

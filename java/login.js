@@ -141,26 +141,14 @@ $('#cd').click(() => {
     window.location.href = 'cadastro.html';
 })
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
+
   
 function Login(){
+    
     let email = document.querySelector('#email').value;
     let senha = document.querySelector('#senha').value;
     let comp = SHA1(email + senha);
-    if (comp == getCookie(email)){
+    if (comp == sessionStorage.getItem(email)){
         window.location.href = '../index.html';
 
     }

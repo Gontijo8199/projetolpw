@@ -10,14 +10,18 @@
 </head>
 <body>
     <aside id="login">
-        <h1>Login</h1>
+        <h1>Cadastro</h1>
         Email:<input type="text" id="email" value="">
         Senha:<input type="text" id="senha" value="">
+        <form action="">
+        Foto de perfil:
+        <br><input type="file"  id="filename" name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg" /> 
+        </form onsubmit="Checkfiles()">
             <div>
                 <button id="Cc" onclick="cadastrar();">Criar conta</button>
 
             </div>
-            <button id="cd">Login</button>
+            
     </aside>
 </body>
 <script src='..\java\jquery-3.6.1.min.js'></script>

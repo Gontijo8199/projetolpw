@@ -1,6 +1,5 @@
 let email = document.querySelector('#email').value;
 let senha = document.querySelector('#senha').value;
-let storage = email + senha;
 
 
 function SHA1(msg) {
@@ -138,18 +137,43 @@ function SHA1(msg) {
    }
    
 
-let hashfinal = SHA1(storage);
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
+
+
 function cadastrar(){
-    setCookie(email, hashfinal,16);
+    let email = document.querySelector('#email').value;
+    let senha = document.querySelector('#senha').value;
     
+    let hashfinal = SHA1(email + senha);
+    if (email == "" || senha ==""){
+        alert("Senha e email invalidos!");
+    } else{
+    if (hashfinal != sessionStorage.getItem(email)){
+       sessionStorage.clear(email);
+       sessionStorage.setItem(email, hashfinal);
+       if(sessionStorage.getItem(email) == SHA1(email+senha)){
+            alert("Cadastro com sucesso!");
+            window.location.href = 'login.html'
+       } else {
+            alert("Erro!");
+       }
+    } else{
+        
+        alert("Conta com email e senha ja em uso!");
+        window.location.href = 'login.html'
+    }
 }
-$('#cd').click(() => {
-    
-    window.location.href = 'login.html';
-})
+    return 0;
+
+}
+function Checkfiles(){
+    var fup = document.getElementById('filename');
+    var fileName = fup.value;
+    var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+  
+    if(ext =="jpeg" || ext=="png"){
+        return true;
+    }
+    else{
+        alert("Arquivo não suportado!");
+    }
+  }

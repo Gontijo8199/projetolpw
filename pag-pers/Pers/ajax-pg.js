@@ -5,7 +5,6 @@ $.ajax({
     dataType: 'json',
     success: res => {
         let dd = res.data;
-        let nv = 1;
         const lvl = 1;
 
         $("#nm").html(dd.route);
@@ -24,14 +23,24 @@ $.ajax({
                             $(ic).attr('src', `https://api.ambr.top/assets/UI/${tl.icon}.png`);
                             $(nm).html(tl.name);
 
+                        $(tr1).append(`<p>${tl.description}<\p>`);
                         $(tr2).append(ic);
-                        $(tr1).append(nm);
-
+                    $(the).append(nm);
                     $(the).append(tr1);
-                    $(the).append(tl.description);
                     $(the).append(tr2);
                 
-                $(tb).append(the);
+                if(tl.type === 0){
+                    $(tb).addClass(`pag1`);
+                }
+                else if(tl.type === 1){
+                    $(tb).addClass('pag2');
+                    $(tb).css('display', 'none');
+                }
+                else if(tl.type === 2){
+                    $(tb).addClass('pag3')
+                    $(tb).css('display', 'none');
+                }
+                    $(tb).append(the);
                 
                 if(tl.type == '0' || tl.type == '1'){
                     for(let e = 0; e < Object.keys(tl.promote[lvl].description).length; e++){
@@ -92,8 +101,7 @@ $.ajax({
                                     obj += 's';
                                 }
                                 else if(mod == 'F2P'){
-                                    obj *= 100;
-                                    obj = Math.round(obj);
+                                    obj *= 100;11
                                     obj += ' Per Energy';
                                 }
                                         $($pmult).html(obj);

@@ -1,0 +1,35 @@
+Permitir que o usuário crie conteúdo (e.g., tarefas, playlists, avatares, enquetes etc.) durante sua interação com a aplicação
+A criação de conteúdo deve envolver a criação/atualização/remoção de elementos HTML da página (manipulação do DOM)
+Armazenamento de dados usando web storage. Por exemplo:
+O nome de usuário/senha que a pessoa criou
+As playlists/músicas que a pessoa criou e curtiu
+A pontuação, nome e em qual fase a pessoa está em um joguinho
+Layout e design agradáveis - não pode ter carinha de site da década de 90, nem dos anos 2000. E deve ser consistente entre as páginas
+Carinha dos anos 90???
+
+
+
+OK --- (3 a 6%) Usar flexbox e grid para o layout
+(6%) Usar media queries (CSS) para tornar as páginas "responsivas" (adaptáveis a diferentes telas - todas as páginas têm que ficar boas em telas grandes, médias e pequenas - pelo menos 320px de largura)
+OK ---(3 a 6%) Usar transformações, transições e animações (com parcimônia, sem exageros) para tornar a interação visualmente mais atrativa
+Usar uma API do HTML5 diretamente para fazer coisas interessantes, como
+(5%) Geolocation API, para pegar latitude/longitude do usuário
+(+5%) Usar a biblioteca do Google Maps para mostrar no mapa
+(+10%) Consultar a previsão do tempo no local onde o usuário está (usando por ex., a API do OpenWeatherMap via Ajax bomb)
+(2 a 12%)Canvas API, para desenhar na página usando JavaScript
+(9%) Speech Synthesis API, para fazer o navegador falar (ler em voz alta uma string que você passa pra ele - string -> voz)
+(12%) Speech Recognition API, pra fazer o navegador entender o que o usuário está falando no microfone (voz -> string)
+(5%) Vibration API, para fazer o telefone/tablet vibrar
+(10%) Usar um framework CSS para agilizar o desenvolvimento, como o Bootstrap, Materialize, JQueryUI, Foundation
+Usar alguma biblioteca JavaScript para auxiliar no desenvolvimento. Por exemplo:
+(0 a 1%) cheet.js pra fazer Easter Eggs (mas tem que ser bem mais legal que um window.alert hein!!)
+    OK --- (até 10%) jQuery
+    (até 10%) Google Charts, ou NVD3.js, ou HighCharts (para exibir gráficos)
+    (até 15%) Angular, React (para criar SPAs - single page applications)
+    (até 15%) Phaser (para jogos que usam o <canvas></canvas>)
+OK --- (13%) Usar AJAX para buscar algum tipo de dados
+(até 25%) Criar um back-end com um banco de dados para persistir os dados no servidor, em vez de apenas localmente com o web storage
+(+10%) Possibilitar usuário se cadastrar e logar na aplicação
+OK --- (5%) Usar o Git com o Github (ou outro serviço de hospedagem de repositórios) fazendo vários commits (por todos alunos pelo menos 1 por semana)
+(10%) Fazer uma entrega parcial (praticamente completa) no dia 23/11/22 (no horário da aula)
+Legenda:

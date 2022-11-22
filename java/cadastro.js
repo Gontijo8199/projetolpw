@@ -1,3 +1,8 @@
+let email = document.querySelector('#email').value;
+let senha = document.querySelector('#senha').value;
+let storage = email + senha;
+
+
 function SHA1(msg) {
     function rotate_left(n,s) {
     var t4 = ( n<<s ) | (n>>>(32-s));
@@ -131,39 +136,20 @@ function SHA1(msg) {
    
     return temp.toLowerCase();
    }
-localStorage.setItem('logged', 'false');
-$('#sa').click(() => {
-    localStorage.setItem('logged', 'guest');
-    window.location.href = '../index.html';
-})
+   
+
+let hashfinal = SHA1(storage);
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+function cadastrar(){
+    setCookie(email, hashfinal,16);
+    
+}
 $('#cd').click(() => {
     
-    window.location.href = 'cadastro.html';
+    window.location.href = 'login.html';
 })
-
-function getCookie(cname) {
-    let name = cname + "=";
-    let ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-  
-function Login(){
-    let email = document.querySelector('#email').value;
-    let senha = document.querySelector('#senha').value;
-    let comp = SHA1(email + senha);
-    if (comp == getCookie(email)){
-        window.location.href = '../index.html';
-
-    }
-    else{ alert("Senha ou Email Invalidos");}
-
-}

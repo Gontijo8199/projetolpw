@@ -1,4 +1,4 @@
-    #usu{
+#usu{
     width: 12.5em;
     height: 150px;
     display: flex;
@@ -21,4 +21,8 @@
 #usu tbody tr{
     display: flex;
     flex-direction: column;
+}
+a{
+    color: white;
+    
 }

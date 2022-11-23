@@ -1,5 +1,3 @@
-let email = document.querySelector('#email').value;
-let senha = document.querySelector('#senha').value;
 
 
 function SHA1(msg) {
@@ -137,25 +135,52 @@ function SHA1(msg) {
    }
    
 
+   function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    return 0;
+  }
+  function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 
-
+var email = document.querySelector('#email');
+var senha = document.querySelector('#senha');
 function cadastrar(){
-    let email = document.querySelector('#email').value;
-    let senha = document.querySelector('#senha').value;
+   
     
-    let hashfinal = SHA1(email + senha);
-    if (email == "" || senha ==""){
+    let hashfinal = SHA1(email.value + senha.value);
+    if (email.value == "" && senha.value ==""){
         alert("Senha e email invalidos!");
-    } else{
-    if (hashfinal != sessionStorage.getItem(email)){
-       sessionStorage.clear(email);
-       sessionStorage.setItem(email, hashfinal);
-       if(sessionStorage.getItem(email) == SHA1(email+senha)){
-            alert("Cadastro com sucesso!");
-            window.location.href = 'login.html'
-       } else {
-            alert("Erro!");
-       }
+    } else if(email.value == ""){
+        alert("Você não inseriu seu email!");
+    }else if (senha.value == ""){
+        alert("Você não inseriu sua senha!");
+    }
+    else{
+    if (hashfinal != getCookie(email.value)){
+
+       //sessionStorage.clear(email);
+       //localStorage.setItem('nome', email);
+       //sessionStorage.setItem(email, hashfin.al);
+       setCookie(email.value,hashfinal,1);
+       setCookie("NomeEmUso",email.value,1);
+       window.location.href = 'login.html'
+
     } else{
         
         alert("Conta com email e senha ja em uso!");
@@ -165,15 +190,3 @@ function cadastrar(){
     return 0;
 
 }
-function Checkfiles(){
-    var fup = document.getElementById('filename');
-    var fileName = fup.value;
-    var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
-  
-    if(ext =="jpeg" || ext=="png"){
-        return true;
-    }
-    else{
-        alert("Arquivo não suportado!");
-    }
-  }

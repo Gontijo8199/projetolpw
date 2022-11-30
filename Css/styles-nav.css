@@ -8,6 +8,8 @@
     transition: 90ms linear;
     padding-top: 3px;
 }
+body{    font-family: "Comic Sans MS";}
+
 .subop{
     margin-top: 3px;
     display: none;

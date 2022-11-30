@@ -1,6 +1,8 @@
 body{
+    background-image: linear-gradient(darkblue, lightblue);
     margin: 0px;
-    background-color: rgb(35, 35, 75);
+    display: block;
+    min-height: 100vh;
 }
 
 nav{

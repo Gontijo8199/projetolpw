@@ -4,9 +4,6 @@ tr{
     border: solid black 1px;
     color: white;
 }
-color{
-    white-space: pre-line;
-}
 body{
     background-color: rgb(35, 35, 75);
 }
@@ -15,4 +12,10 @@ table{
 }
 header{
     margin-left: 10%;
+}
+#comments{
+    position: fixed;
+    min-width: 100%;
+    bottom: 0;
+    background-color:khaki
 }

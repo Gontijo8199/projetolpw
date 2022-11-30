@@ -1,4 +1,5 @@
 body{
+    background-image: linear-gradient(darkblue, lightblue);
     margin: 0px;
     display: block;
 }
@@ -32,10 +33,18 @@ thead td{
     display: flex;
     justify-content: center;
 }
-.pert a{
+.pert{
     text-align: center;
 }
 .icnc{
     width: 100px;
     height: 100px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+}
+img{
+    border-radius: 100%;
 }

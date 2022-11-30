@@ -5,7 +5,9 @@
     margin-left: 100px;
     margin-bottom: 50px;
     float: left;
+    
 }
+body{    font-family: "Comic Sans MS";}
 #imgs-nv{
     display: flex;
     justify-content: space-between;
@@ -38,4 +40,11 @@
 }
 #txt{
     margin-top: 50px;
+}
+p{
+    color: white;
+    font-family: "Comic Sans MS";
+}
+table{
+    background-color: white;
 }

@@ -1,0 +1,21 @@
+#slcper{
+    margin-left: 100px;
+}
+#slcper table{
+    display: block;
+    overflow: scroll;
+    max-height: 512px;
+    max-width: 256px;
+}
+.icper:hover{
+    scale: 1.12;
+    cursor: pointer;
+    transition: linear 50ms scale;
+}
+#arma{
+    display: flex;
+    text-align: center;
+}
+img{
+    border-radius: 100%;
+}

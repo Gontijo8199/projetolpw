@@ -5,6 +5,7 @@
     float: right;
     border: solid black 2px;
     flex-direction: column;
+    border-bottom-left-radius: 50px;
 }
 #usu img{
     border-radius: 100%;
@@ -13,7 +14,7 @@
     cursor: pointer;
 }
 #usu{
-    color: white;
+    color: black
 }
 #usu tbody{
     display: none;
@@ -23,6 +24,6 @@
     flex-direction: column;
 }
 a{
-    color: white;
+    color:  black;
     
 }
